@@ -29,6 +29,7 @@ boxplot(oct[,c(3,4,5)],ylab="氣溫" ,xlab="201710", las=1)
 
 nov = getweather('201711.csv', '201711')
 boxplot(aug[,c(3,4,5)],ylab="氣溫" ,xlab="201711", las=1)
+
 plot(jul$測站氣壓,type="b", pch=16, col="black",las=1,xlab="日期" ,
      ylab="大氣壓",,main="2017/07", axes=TRUE)
 plot(aug$測站氣壓,type="b", pch=16, col="black",las=1,xlab="日期" ,
@@ -41,3 +42,4 @@ plot(oct$測站氣壓,type="b", pch=16, col="black",las=1,xlab="日期" ,
 plot(nov$測站氣壓,type="b", pch=16, col="black",las=1,xlab="日期" ,
                                                 
     ylab="大氣壓",,main="2017/11", axes=TRUE)
+
