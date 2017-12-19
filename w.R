@@ -28,18 +28,61 @@ oct = getweather('201710.csv', '201710')
 boxplot(oct[,c(3,4,5)],ylab="氣溫" ,xlab="201710", las=1)
 
 nov = getweather('201711.csv', '201711')
-boxplot(aug[,c(3,4,5)],ylab="氣溫" ,xlab="201711", las=1)
+boxplot(nov[,c(3,4,5)],ylab="氣溫" ,xlab="201711", las=1)
 
+dec = getweather('201712.csv', '201712')
+boxplot(dec[,c(3,4,5)],ylab="氣溫" ,xlab="201712", las=1)
+
+w2017=rbind(jul,aug,sep,oct,nov,dec )
+table(w2017$label)
+plot(氣溫~label,w2017)
 plot(jul$測站氣壓,type="b", pch=16, col="black",las=1,xlab="日期" ,
-     ylab="大氣壓",,main="2017/07", axes=TRUE)
+     ylab="大氣壓",main="2017/07", axes=TRUE)
+plot(jul$測站氣壓,type="o", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/07", axes=TRUE)
+plot(jul$測站氣壓,type="s", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/07", axes=TRUE)
+plot(jul$測站氣壓,type="S", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/07", axes=TRUE)
+
 plot(aug$測站氣壓,type="b", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/08", axes=TRUE)
+plot(aug$測站氣壓,type="o", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/08", axes=TRUE)
+plot(aug$測站氣壓,type="s", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/08", axes=TRUE)
+plot(aug$測站氣壓,type="S", pch=16, col="black",las=1,xlab="日期" ,
      ylab="大氣壓",main="2017/08", axes=TRUE)
 
 plot(sep$測站氣壓,type="b", pch=16, col="black",las=1,xlab="日期" ,
      ylab="大氣壓",main="2017/09", axes=TRUE)
+plot(sep$測站氣壓,type="o", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/09", axes=TRUE)
+plot(sep$測站氣壓,type="s", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/09", axes=TRUE)
+plot(sep$測站氣壓,type="S", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/09", axes=TRUE)
+
 plot(oct$測站氣壓,type="b", pch=16, col="black",las=1,xlab="日期" ,
+      ylab="大氣壓",main="2017/10", axes=TRUE)
+plot(oct$測站氣壓,type="o", pch=16, col="black",las=1,xlab="日期" ,
      ylab="大氣壓",main="2017/10", axes=TRUE)
+
 plot(nov$測站氣壓,type="b", pch=16, col="black",las=1,xlab="日期" ,
-                                                
-    ylab="大氣壓",main="2017/11", axes=TRUE)
+       ylab="大氣壓",main="2017/11", axes=TRUE)
+plot(nov$測站氣壓,type="o", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/11", axes=TRUE)
+plot(nov$測站氣壓,type="s", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/11", axes=TRUE)
+plot(nov$測站氣壓,type="S", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/11", axes=TRUE)
+
+plot(dec$測站氣壓,type="b", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/12", axes=TRUE)
+plot(dec$測站氣壓,type="o", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/12", axes=TRUE)
+plot(dec$測站氣壓,type="s", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/12", axes=TRUE)
+plot(dec$測站氣壓,type="S", pch=16, col="black",las=1,xlab="日期" ,
+     ylab="大氣壓",main="2017/12", axes=TRUE)
 
