@@ -17,7 +17,7 @@ ChickWeight[,c(2:4)]
 
 m=ChickWeight[c(1,3,5,7,9),]
 nrow(c)
-n=c[ChickWeight$Chick == 20,] 
-
+n=c[ChickWeight$Chick == 48,] 
+plot(n$weight)
 
 
