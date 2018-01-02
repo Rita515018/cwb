@@ -20,5 +20,7 @@ nrow(c)
 n=c[ChickWeight$Chick == 48,] 
 plot(n)
 plot(n$weight)
-
+o=subset(ChickWeight,Chick==48,select=c(Time,weight))
+identical(n,o)
+plot(o$weight)
 
