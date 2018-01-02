@@ -23,4 +23,5 @@ plot(n$weight)
 o=subset(ChickWeight,Chick==48,select=c(Time,weight))
 identical(n,o)
 plot(o$weight)
+boxplot(ChickWeight$weight ~ ChickWeight$Diet) 
 
