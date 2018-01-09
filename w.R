@@ -1,88 +1,88 @@
 getweather=function(FILE,LABEL) {
-  title=c("Æ[´ú®É¶¡","´ú¯¸®ğÀ£","®ü­±®ğÀ£",
-          "´ú¯¸³Ì°ª®ğÀ£","´ú¯¸³Ì°ª®ğÀ£®É¶¡","´ú¯¸³Ì§C®ğÀ£",
-          "´ú¯¸³Ì§C®ğÀ£®É¶¡","®ğ·Å","³Ì°ª®ğ·Å","³Ì°ª®ğ·Å®É¶¡",
-          "³Ì§C®ğ·Å","³Ì§C®ğ·Å®É¶¡","ÅSÂI·Å«×","¬Û¹ï·Ã«×",
-          "³Ì¤p¬Û¹ï·Ã«×","³Ì¤p¬Û¹ï·Ã«×®É¶¡","­·³t","­·¦V",
-          "³Ì¤j°}­·","³Ì¤j°}­·­·¦V","³Ì¤j°}­·­·³t®É¶¡",
-          "­°¤ô¶q","­°¤ô®É¼Æ","Æ[´ú10¤ÀÄÁ³Ì¤j­°¤ô¶q",
-          "Æ[´ú10¤ÀÄÁ³Ì¤j­°¤ô°_©l®É¶¡","¤@¤p®É³Ì¤j­°¤ô¶q",
-          "¤@¤p®É³Ì¤j­°¤ô¶q°_©l®É¶¡","¤é·Ó®É¼Æ","¤é·Ó²v",
-          "¥ş¤ÑªÅ¤é®g¶q","¯à¨£«×","A«¬»]µo¶q")
+  title=c("è§€æ¸¬æ™‚é–“","æ¸¬ç«™æ°£å£“","æµ·é¢æ°£å£“",
+          "æ¸¬ç«™æœ€é«˜æ°£å£“","æ¸¬ç«™æœ€é«˜æ°£å£“æ™‚é–“","æ¸¬ç«™æœ€ä½æ°£å£“",
+          "æ¸¬ç«™æœ€ä½æ°£å£“æ™‚é–“","æ°£æº«","æœ€é«˜æ°£æº«","æœ€é«˜æ°£æº«æ™‚é–“",
+          "æœ€ä½æ°£æº«","æœ€ä½æ°£æº«æ™‚é–“","éœ²é»æº«åº¦","ç›¸å°æº¼åº¦",
+          "æœ€å°ç›¸å°æº¼åº¦","æœ€å°ç›¸å°æº¼åº¦æ™‚é–“","é¢¨é€Ÿ","é¢¨å‘",
+          "æœ€å¤§é™£é¢¨","æœ€å¤§é™£é¢¨é¢¨å‘","æœ€å¤§é™£é¢¨é¢¨é€Ÿæ™‚é–“",
+          "é™æ°´é‡","é™æ°´æ™‚æ•¸","è§€æ¸¬10åˆ†é˜æœ€å¤§é™æ°´é‡",
+          "è§€æ¸¬10åˆ†é˜æœ€å¤§é™æ°´èµ·å§‹æ™‚é–“","ä¸€å°æ™‚æœ€å¤§é™æ°´é‡",
+          "ä¸€å°æ™‚æœ€å¤§é™æ°´é‡èµ·å§‹æ™‚é–“","æ—¥ç…§æ™‚æ•¸","æ—¥ç…§ç‡",
+          "å…¨å¤©ç©ºæ—¥å°„é‡","èƒ½è¦‹åº¦","Aå‹è’¸ç™¼é‡")
   x=read.csv(FILE,skip=1,header=F)
   names(x) = title; y=x[,c(1,2,8,9,11,14)];
   y['label']=LABEL; return (y) ;
 }
 
 jul = getweather('201707.csv', '201707')
-boxplot(jul[,c(3,4,5)],ylab="®ğ·Å" ,xlab="201707", las=1)
+boxplot(jul[,c(3,4,5)],ylab="æ°£æº«" ,xlab="201707", las=1)
 
 aug = getweather('201708.csv', '201708')
-boxplot(aug[,c(3,4,5)],ylab="®ğ·Å" ,xlab="201708", las=1)
+boxplot(aug[,c(3,4,5)],ylab="æ°£æº«" ,xlab="201708", las=1)
 
 sep = getweather('201709.csv', '201709')
 par(mar=c(5,4,4,2)+1)
-boxplot(sep[,c(3,4,5)],ylab="®ğ·Å" ,xlab="201709", las=1)
+boxplot(sep[,c(3,4,5)],ylab="æ°£æº«" ,xlab="201709", las=1)
 
 oct = getweather('201710.csv', '201710')
-boxplot(oct[,c(3,4,5)],ylab="®ğ·Å" ,xlab="201710", las=1)
+boxplot(oct[,c(3,4,5)],ylab="æ°£æº«" ,xlab="201710", las=1)
 
 nov = getweather('201711.csv', '201711')
-boxplot(nov[,c(3,4,5)],ylab="®ğ·Å" ,xlab="201711", las=1)
+boxplot(nov[,c(3,4,5)],ylab="æ°£æº«" ,xlab="201711", las=1)
 
 dec = getweather('201712.csv', '201712')
-boxplot(dec[,c(3,4,5)],ylab="®ğ·Å" ,xlab="201712", las=1)
+boxplot(dec[,c(3,4,5)],ylab="æ°£æº«" ,xlab="201712", las=1)
 
 w2017=rbind(jul,aug,sep,oct,nov,dec )
 table(w2017$label)
-plot(®ğ·Å~label,w2017)
-plot(jul$´ú¯¸®ğÀ£,type="b", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/07", axes=TRUE)
-plot(jul$´ú¯¸®ğÀ£,type="o", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/07", axes=TRUE)
-plot(jul$´ú¯¸®ğÀ£,type="s", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/07", axes=TRUE)
-plot(jul$´ú¯¸®ğÀ£,type="S", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/07", axes=TRUE)
+plot(æ°£æº«~label,w2017)
+plot(jul$æ¸¬ç«™æ°£å£“,type="b", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/07", axes=TRUE)
+plot(jul$æ¸¬ç«™æ°£å£“,type="o", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/07", axes=TRUE)
+plot(jul$æ¸¬ç«™æ°£å£“,type="s", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/07", axes=TRUE)
+plot(jul$æ¸¬ç«™æ°£å£“,type="S", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/07", axes=TRUE)
 
-plot(aug$´ú¯¸®ğÀ£,type="b", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/08", axes=TRUE)
-plot(aug$´ú¯¸®ğÀ£,type="o", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/08", axes=TRUE)
-plot(aug$´ú¯¸®ğÀ£,type="s", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/08", axes=TRUE)
-plot(aug$´ú¯¸®ğÀ£,type="S", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/08", axes=TRUE)
+plot(aug$æ¸¬ç«™æ°£å£“,type="b", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/08", axes=TRUE)
+plot(aug$æ¸¬ç«™æ°£å£“,type="o", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/08", axes=TRUE)
+plot(aug$æ¸¬ç«™æ°£å£“,type="s", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/08", axes=TRUE)
+plot(aug$æ¸¬ç«™æ°£å£“,type="S", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/08", axes=TRUE)
 
-plot(sep$´ú¯¸®ğÀ£,type="b", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/09", axes=TRUE)
-plot(sep$´ú¯¸®ğÀ£,type="o", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/09", axes=TRUE)
-plot(sep$´ú¯¸®ğÀ£,type="s", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/09", axes=TRUE)
-plot(sep$´ú¯¸®ğÀ£,type="S", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/09", axes=TRUE)
+plot(sep$æ¸¬ç«™æ°£å£“,type="b", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/09", axes=TRUE)
+plot(sep$æ¸¬ç«™æ°£å£“,type="o", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/09", axes=TRUE)
+plot(sep$æ¸¬ç«™æ°£å£“,type="s", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/09", axes=TRUE)
+plot(sep$æ¸¬ç«™æ°£å£“,type="S", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/09", axes=TRUE)
 
-plot(oct$´ú¯¸®ğÀ£,type="b", pch=16, col="black",las=1,xlab="¤é´Á" ,
-      ylab="¤j®ğÀ£",main="2017/10", axes=TRUE)
-plot(oct$´ú¯¸®ğÀ£,type="o", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/10", axes=TRUE)
+plot(oct$æ¸¬ç«™æ°£å£“,type="b", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/10", axes=TRUE)
+plot(oct$æ¸¬ç«™æ°£å£“,type="o", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/10", axes=TRUE)
 
-plot(nov$´ú¯¸®ğÀ£,type="b", pch=16, col="black",las=1,xlab="¤é´Á" ,
-       ylab="¤j®ğÀ£",main="2017/11", axes=TRUE)
-plot(nov$´ú¯¸®ğÀ£,type="o", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/11", axes=TRUE)
-plot(nov$´ú¯¸®ğÀ£,type="s", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/11", axes=TRUE)
-plot(nov$´ú¯¸®ğÀ£,type="S", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/11", axes=TRUE)
+plot(nov$æ¸¬ç«™æ°£å£“,type="b", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/11", axes=TRUE)
+plot(nov$æ¸¬ç«™æ°£å£“,type="o", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/11", axes=TRUE)
+plot(nov$æ¸¬ç«™æ°£å£“,type="s", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/11", axes=TRUE)
+plot(nov$æ¸¬ç«™æ°£å£“,type="S", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/11", axes=TRUE)
 
-plot(dec$´ú¯¸®ğÀ£,type="b", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/12", axes=TRUE)
-plot(dec$´ú¯¸®ğÀ£,type="o", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/12", axes=TRUE)
-plot(dec$´ú¯¸®ğÀ£,type="s", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/12", axes=TRUE)
-plot(dec$´ú¯¸®ğÀ£,type="S", pch=16, col="black",las=1,xlab="¤é´Á" ,
-     ylab="¤j®ğÀ£",main="2017/12", axes=TRUE)
+plot(dec$æ¸¬ç«™æ°£å£“,type="b", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/12", axes=TRUE)
+plot(dec$æ¸¬ç«™æ°£å£“,type="o", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/12", axes=TRUE)
+plot(dec$æ¸¬ç«™æ°£å£“,type="s", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/12", axes=TRUE)
+plot(dec$æ¸¬ç«™æ°£å£“,type="S", pch=16, col="black",las=1,xlab="æ—¥æœŸ" ,
+     ylab="å¤§æ°£å£“",main="2017/12", axes=TRUE)
 
