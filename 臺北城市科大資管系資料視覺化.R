@@ -26,6 +26,15 @@ plot(x=n9$Time,y=n9$weight,type='o',main="Chicken 9",las=1,lwd=2,xlab="Time",yla
 plot(x=n18$Time,y=n18$weight,type='o',main="Chicken 18", las=1,lwd=2,xlab="Time",ylab="Weight",col=3, xlim=c(0,21),ylim=c(0,250))
 plot(x=d1$Time,y=d1$weight,type='p',main="Diet 1",las=1,xlab="Time",ylab="Weight")
 
+n24=subset(n,Chick==24)
+n25=subset(n,Chick==25)
+n26=subset(n,Chick==26)
+plot(x=n24$Time,y=n24$weight,type='o',main="Chicken 24",las=1,lwd=2,xlab="Time",ylab="Weight")
+plot(x=n25$Time,y=n25$weight,type='o',main="Chicken 25",las=1,lwd=2,xlab="Time",ylab="Weight",col=2)
+plot(x=n26$Time,y=n26$weight,type='o',main="Chicken 26",las=1,lwd=2,xlab="Time",ylab="Weight",col=3)
+d2=subset(ChickWeight, Diet==2)
+plot(x=d2$Time,y=d2$weight,type='p',main="Diet 1",las=1,xlab="Time",ylab="Weight")
+
 # 擷取1-4號食譜的所有資料
 d1=subset(ChickWeight, Diet==1)
 d2=subset(ChickWeight, Diet==2)
